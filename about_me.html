@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>About Me</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href='https://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style>
+html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
+.w3-bar-block .w3-bar-item {padding: 16px}
+</style>
+<body>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-pink w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="about_me.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Me</a>
+    <a href="professional.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Profession</a>
+    <a href="portfolio.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Portfolio</a>
+    <a href="service.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Service</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="about_me.html" class="w3-bar-item w3-button w3-padding-large">About Me</a>
+    <a href="professional.html" class="w3-bar-item w3-button w3-padding-large">Profession</a>
+    <a href="portfolio.html" class="w3-bar-item w3-button w3-padding-large">Portfolio</a>
+    <a href="service.html" class="w3-bar-item w3-button w3-padding-large">Service</a>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- Page content -->
+<div class="w3-main" >
+<i class="fa fa-bars w3-button w3-white w3-hide-large w3-xlarge w3-margin-left w3-margin-top" onclick="w3_open()"></i>
+<a href="javascript:void(0)" class="w3-hide-large w3-red w3-button w3-right w3-margin-top w3-margin-right" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-pencil"></i></a>
+
+<div id="Borge" class="w3-container person">
+  <br>
+  <img src="kyle.jpg" class ="center" style="width:40%;">
+
+  <p>Hello, my name is Iliana Aguilar and I am a junior at <a href = "https://engineering.tamu.edu/">Texas A&M</a <p> studying computer engineering in the computer science track.</p>
+  <p>I graduated from Hempstead High School and started my college career in the Texas A&M Engineering Academy at Blinn-Brenham before transitioning fully to Texas A&M University Spring 2019.</p>
+  <p> Outside of school, I really enjoy dancing and playing soccer. I started dancing in 2016 and I have competed in dance competitions with the crew I was in called Beta Crew. <a href="https://www.youtube.com/watch?v=DNs_GR1Sme8">Here</a 
+<p> you can find our performance where we won 2nd place in the 2018 Houston Summer Meltdown. </p>
+ <p> I also enjoy playing soccer and I was actually part of the Blinn Soccer team. You can find my profile page <a href="http://www.buccaneersports.com/sports/wsoc/2018-19/bios/aguilar_iliana_44p7">here</a 
+ <p>. I played left defender and we competed all across Texas. </p>
+ <p> If I want to nerd out, sometimes I enjoy solving coding problems from Google's prep material on <a href = "https://leetcode.com/problemset/all/" >Leetcode</a>. They are pretty fun to solve and good exercises to stimulate
+ coding problem solving skills. I also like watching <a href =https://www.youtube.com/user/TEDtalksDirector" >Ted Talks</a> 
+ on Youtube over interesting subjects like the tech world as well as the spiritual world. </a>
+ 
+ <h2> Contact Me </h2>
+ <p> <i class="fa fa-envelope" style="font-size:36px"></i> Email: ilianaagui99@tamu.edu </p>
+ <p> <i class="fa fa-linkedin fa-3x" ></i> <a href =" https://www.linkedin.com/in/iliana-aguilar-452469182" >LinkedIn</a>
+
+<script>
+var openInbox = document.getElementById("myBtn");
+openInbox.click();
+
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+function myFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show"; 
+    x.previousElementSibling.className += " w3-red";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-red", "");
+  }
+}
+
+openMail("Borge")
+function openMail(personName) {
+  var i;
+  var x = document.getElementsByClassName("person");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x = document.getElementsByClassName("test");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" w3-light-grey", "");
+  }
+  document.getElementById(personName).style.display = "block";
+  event.currentTarget.className += " w3-light-grey";
+}
+</script>
+
+<script>
+var openTab = document.getElementById("firstTab");
+openTab.click();
+</script>
+
+</body>
+</html> 
